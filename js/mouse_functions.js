@@ -8,3 +8,8 @@
 			var x = document.getElementById(id);
 			x.style.display = 'none';
 		}
+
+		function border(id){
+			var x =document.getElementById(id);
+			x.style.borderColor = 'red';
+		}

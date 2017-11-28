@@ -1,6 +1,7 @@
 <!--Next steps
-Add function calls to buttons under "Where are you?" and "Where do you want to go"
-See button for MOA for example of call
+Need function to display routes 
+Add border to selected buttons
+Display route based on buttons with border
 -->
 <!DOCTYPE html>
 <html>
@@ -17,7 +18,7 @@ See button for MOA for example of call
 	<p>This website provides directions to UBC's many wonderful museums and attractions. To get started select your location from the list below. Then select your desired destination. The route will display on the map.<p>
 
 	<h2>Where are you?</h2>
-		<Button onmouseover="showStuff('Beatty')" onmouseout="hideStuff('Beatty')">Beatty Biodiversity Museum</BUTTON></li>
+		<button onmouseover="showStuff('Beatty')" onmouseout="hideStuff('Beatty')" onclick="border('BeAre')" style="border-color: none;" id="BeAre">Beatty Biodiversity Museum</button>
 		<Button onmouseover="showStuff('Bus')" onmouseout="hideStuff('Bus')">Bus Loop at UBC</button>
 		<button onmouseover="showStuff('MOA')" onmouseout="hideStuff('MOA')">Museum of Anthropology (MOA)</button>
 		<button onmouseover="showStuff('Nest')" onmouseout="hideStuff('Nest')">The Nest</button>
@@ -25,7 +26,7 @@ See button for MOA for example of call
 		<button onmouseover="showStuff('Pacific')" onmouseout="hideStuff('Pacific')">Pacific Museum of the Earth</button>
 
 	<h2>Where do you want to go?</h2>
-		<Button onmouseover="showStuff('Beatty')" onmouseout="hideStuff('Beatty')">Beatty Biodiversity Museum</BUTTON></li>
+		<Button onmouseover="showStuff('Beatty')" onmouseout="hideStuff('Beatty')">Beatty Biodiversity Museum</BUTTON>
 		<Button onmouseover="showStuff('Bus')" onmouseout="hideStuff('Bus')">Bus Loop at UBC</button>
 		<button onmouseover="showStuff('MOA')" onmouseout="hideStuff('MOA')">Museum of Anthropology (MOA)</button>
 		<button onmouseover="showStuff('Nest')" onmouseout="hideStuff('Nest')">The Nest</button>
@@ -38,39 +39,39 @@ See button for MOA for example of call
 <!--Map Section-->
 <img src="images/Route.jpg" style="width: 80vw; height: 90vh; position: fixed; top: 1.5vh; left: 19vw">
 
-<div class="MOA">
+<div onclick="showStuff('MOA')" class="MOA">
 		<a href="#" class="showTip L1">
-			<img onmouseover="bigMOA()" onmouseout="normalMOA()" src="images/MOA.png" style="width: 8vw; height: 15vh; display: none;" id="MOA">
+			<img src="images/MOA.png" style="width: 8vw; height: 15vh; display: none;" id="MOA">
 		</a>
 </div>
 
 <div class="Nitobe">
 		<a href="#" class="showTip L2">
-			<img onmouseover="bigNitobe()" onmouseout="normalNitobe()" src="images/Nitobe.png" style="width: 11vw; height: 20.5vh; display: none;" id="Nitobe">
+			<img onmouseover="showStuff('Nitobe')" onmouseout="hideStuff('Nitobe')" src="images/Nitobe.png" style="width: 11vw; height: 20.5vh; display: none;" id="Nitobe">
 		</a>
 </div>
 
 <div class="Beatty">
 	<a href="#" class="showTip L3">
-		<img onmouseover="bigBeatty()" onmouseout="normalBeatty()" src="images/Beatty.png" style="width: 10vw; height: 20.5vh; display: none;" id="Beatty">
+		<img onmouseover="showStuff('Beatty')" onmouseout="hideStuff('Beatty')" src="images/Beatty.png" style="width: 10vw; height: 20.5vh; display: none;" id="Beatty">
 	</a>
 </div>
 
 <div class="Nest">
 	<a href="#" class="showTip L4">
-		<img onmouseover="bigNest()" onmouseout="normalNest()" src="images/Nest.png" style="width: 8.4vw; height: 16vh; display: none;" id="Nest">
+		<img onmouseover="showStuff('Nest')" onmouseout="hideStuff('Nest')" src="images/Nest.png" style="width: 8.4vw; height: 16vh; display: none;" id="Nest">
 	</a>
 </div>
 
 <div class="Pacific">
 	<a href="#" class="showTip L5">
-		<img onmouseover="bigPacific()" onmouseout="normalPacific()" src="images/Pacific.png" style="width: 6vw; height: 11vh; display: none;" id="Pacific">
+		<img onmouseover="showStuff('Pacific')" onmouseout="hideStuff('Pacific')" src="images/Pacific.png" style="width: 6vw; height: 11vh; display: none;" id="Pacific">
 	</a>	
 </div>
 
 <div class="Bus">
 	<a href="#" class="showTip L6">
-	<img onmouseover="bigBus()" onmouseout="normalBus()" src="images/Bus.png" style="width: 11vw; height: 12vh; display: none;" id="Bus">
+	<img onmouseover="showStuff('Bus')" onmouseout="hideStuff('Bus')" src="images/Bus.png" style="width: 11vw; height: 12vh; display: none;" id="Bus">
 	</a>
 </div>	
 	
