@@ -17,20 +17,20 @@ See button for MOA for example of call
 	<p>This website provides directions to UBC's many wonderful museums and attractions. To get started select your location from the list below. Then select your desired destination. The route will display on the map.<p>
 
 	<h2>Where are you?</h2>
-		<Button>Beatty Biodiversity Museum</BUTTON></li>
-		<Button>Bus Loop at UBC</button>
-		<button onmouseover="bigMOA()" onmouseout="normalMOA()">Museum of Anthropology (MOA)</button>
-		<button>The Nest</button>
-		<button>Nitobe Memorial Garden</button>
-		<button>Pacific Museum of the Earth</button>
+		<Button onmouseover="showStuff('Beatty')" onmouseout="hideStuff('Beatty')">Beatty Biodiversity Museum</BUTTON></li>
+		<Button onmouseover="showStuff('Bus')" onmouseout="hideStuff('Bus')">Bus Loop at UBC</button>
+		<button onmouseover="showStuff('MOA')" onmouseout="hideStuff('MOA')">Museum of Anthropology (MOA)</button>
+		<button onmouseover="showStuff('Nest')" onmouseout="hideStuff('Nest')">The Nest</button>
+		<button onmouseover="showStuff('Nitobe')" onmouseout="hideStuff('Nitobe')">Nitobe Memorial Garden</button>
+		<button onmouseover="showStuff('Pacific')" onmouseout="hideStuff('Pacific')">Pacific Museum of the Earth</button>
 
 	<h2>Where do you want to go?</h2>
-		<button>Beatty Biodiversity Museum</button>
-		<button>Bus Loop at UBC</button>
-		<button>Museum of Anthropology (MOA)</button>
-		<button>The Nest</button>
-		<button>Nitobe Memorial Garden</button>
-		<button>Pacific Museum of the Earth</button>
+		<Button onmouseover="showStuff('Beatty')" onmouseout="hideStuff('Beatty')">Beatty Biodiversity Museum</BUTTON></li>
+		<Button onmouseover="showStuff('Bus')" onmouseout="hideStuff('Bus')">Bus Loop at UBC</button>
+		<button onmouseover="showStuff('MOA')" onmouseout="hideStuff('MOA')">Museum of Anthropology (MOA)</button>
+		<button onmouseover="showStuff('Nest')" onmouseout="hideStuff('Nest')">The Nest</button>
+		<button onmouseover="showStuff('Nitobe')" onmouseout="hideStuff('Nitobe')">Nitobe Memorial Garden</button>
+		<button onmouseover="showStuff('Pacific')" onmouseout="hideStuff('Pacific')">Pacific Museum of the Earth</button>
 	<p>*This project is not endorsed by the University of British Columbia. An intial prototype was developed for an assignment in LIBR 556 2016-2017. I have continued working on this project for fun. This map was last updated in August 2017.</p>
 </article>
 
@@ -40,37 +40,37 @@ See button for MOA for example of call
 
 <div class="MOA">
 		<a href="#" class="showTip L1">
-			<img onmouseover="bigMOA()" onmouseout="normalMOA()" src="images/MOA.png" style="width: 8vw; height: 15vh;" id="MOA">
+			<img onmouseover="bigMOA()" onmouseout="normalMOA()" src="images/MOA.png" style="width: 8vw; height: 15vh; display: none;" id="MOA">
 		</a>
 </div>
 
 <div class="Nitobe">
 		<a href="#" class="showTip L2">
-			<img onmouseover="bigNitobe()" onmouseout="normalNitobe()" src="images/Nitobe.png" style="width: 11vw; height: 20.5vh" id="Nitobe">
+			<img onmouseover="bigNitobe()" onmouseout="normalNitobe()" src="images/Nitobe.png" style="width: 11vw; height: 20.5vh; display: none;" id="Nitobe">
 		</a>
 </div>
 
 <div class="Beatty">
 	<a href="#" class="showTip L3">
-		<img onmouseover="bigBeatty()" onmouseout="normalBeatty()" src="images/Beatty.png" style="width: 10vw; height: 20.5vh" id="Beatty">
+		<img onmouseover="bigBeatty()" onmouseout="normalBeatty()" src="images/Beatty.png" style="width: 10vw; height: 20.5vh; display: none;" id="Beatty">
 	</a>
 </div>
 
 <div class="Nest">
 	<a href="#" class="showTip L4">
-		<img onmouseover="bigNest()" onmouseout="normalNest()" src="images/Nest.png" style="width: 8.4vw; height: 16vh;" id="Nest">
+		<img onmouseover="bigNest()" onmouseout="normalNest()" src="images/Nest.png" style="width: 8.4vw; height: 16vh; display: none;" id="Nest">
 	</a>
 </div>
 
 <div class="Pacific">
 	<a href="#" class="showTip L5">
-		<img onmouseover="bigPacific()" onmouseout="normalPacific()" src="images/Pacific.png" style="width: 6vw; height: 11vh;" id="Pacific">
+		<img onmouseover="bigPacific()" onmouseout="normalPacific()" src="images/Pacific.png" style="width: 6vw; height: 11vh; display: none;" id="Pacific">
 	</a>	
 </div>
 
 <div class="Bus">
 	<a href="#" class="showTip L6">
-	<img onmouseover="bigBus()" onmouseout="normalBus()" src="images/Bus.png" style="width: 11vw; height: 12vh;" id="Bus">
+	<img onmouseover="bigBus()" onmouseout="normalBus()" src="images/Bus.png" style="width: 11vw; height: 12vh; display: none;" id="Bus">
 	</a>
 </div>	
 	
