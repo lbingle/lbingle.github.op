@@ -1,12 +1,12 @@
 //mouseover and mouseoff functions
 		function bigMOA() {
-			var x = document.getElementById("MOA");
+			var x = document.getElementById("MOA.png");
 			x.style.height = "18vh";
 			x.style.width = "9.6vw";
 		}
 
 		function normalMOA() {
-			var x = document.getElementById("MOA");
+			var x = document.getElementById("MOA.png");
 			x.style.height = "15vh";
 			x.style.width = "8vw";
 		}
