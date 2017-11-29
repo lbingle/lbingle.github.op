@@ -18,20 +18,26 @@ Display route based on buttons with border
 	<p>This website provides directions to UBC's many wonderful museums and attractions. To get started select your location from the list below. Then select your desired destination. The route will display on the map.<p>
 
 	<h2>Where are you?</h2>
-		<button onmouseover="showStuff('Beatty')" onmouseout="hideStuff('Beatty')" onclick="border('BeAre')" style="border-color: none;" id="BeAre">Beatty Biodiversity Museum</button>
-		<Button onmouseover="showStuff('Bus')" onmouseout="hideStuff('Bus')">Bus Loop at UBC</button>
-		<button onmouseover="showStuff('MOA')" onmouseout="hideStuff('MOA')">Museum of Anthropology (MOA)</button>
-		<button onmouseover="showStuff('Nest')" onmouseout="hideStuff('Nest')">The Nest</button>
-		<button onmouseover="showStuff('Nitobe')" onmouseout="hideStuff('Nitobe')">Nitobe Memorial Garden</button>
-		<button onmouseover="showStuff('Pacific')" onmouseout="hideStuff('Pacific')">Pacific Museum of the Earth</button>
+		<button class='none' id="Be" onmouseover="showStuff('Beatty')" 		onmouseout="hideStuff('Beatty')" 	onclick="border('Be')">
+			Beatty Biodiversity Museum</button>
+		<Button class='none' id='Bu' onmouseover="showStuff('Bus')" 		onmouseout="hideStuff('Bus')" 		onclick="border('Bu')">
+			Bus Loop at UBC</button>
+		<button class='none' id='MO' onmouseover="showStuff('MOA')" 		onmouseout="hideStuff('MOA')" 		onclick="border('MO')">
+			Museum of Anthropology (MOA)</button>
+		<button class='none' id='Ne' onmouseover="showStuff('Nest')" 		onmouseout="hideStuff('Nest')" 		onclick="border('Ne')">
+			The Nest</button>
+		<button class='none' id='Ni' onmouseover="showStuff('Nitobe')" 		onmouseout="hideStuff('Nitobe')" 	onclick="border('Ni')">
+			Nitobe Memorial Garden</button>
+		<button class='none' id='Pa' onmouseover="showStuff('Pacific')" 	onmouseout="hideStuff('Pacific')" 	onclick="border('Pa')">
+			Pacific Museum of the Earth</button>
 
 	<h2>Where do you want to go?</h2>
-		<Button onmouseover="showStuff('Beatty')" onmouseout="hideStuff('Beatty')">Beatty Biodiversity Museum</BUTTON>
-		<Button onmouseover="showStuff('Bus')" onmouseout="hideStuff('Bus')">Bus Loop at UBC</button>
-		<button onmouseover="showStuff('MOA')" onmouseout="hideStuff('MOA')">Museum of Anthropology (MOA)</button>
-		<button onmouseover="showStuff('Nest')" onmouseout="hideStuff('Nest')">The Nest</button>
-		<button onmouseover="showStuff('Nitobe')" onmouseout="hideStuff('Nitobe')">Nitobe Memorial Garden</button>
-		<button onmouseover="showStuff('Pacific')" onmouseout="hideStuff('Pacific')">Pacific Museum of the Earth</button>
+		<Button class='none' id='Be2' style='display: block;' onmouseover="showStuff('Beatty')" 		onmouseout="hideStuff('Beatty')">Beatty Biodiversity Museum</BUTTON>
+		<Button class='none' id='Bu2' onmouseover="showStuff('Bus')" 		onmouseout="hideStuff('Bus')">Bus Loop at UBC</button>
+		<button class='none' id='MO2' onmouseover="showStuff('MOA')" 		onmouseout="hideStuff('MOA')">Museum of Anthropology (MOA)</button>
+		<button class='none' id='Ne2' onmouseover="showStuff('Nest')" 		onmouseout="hideStuff('Nest')">The Nest</button>
+		<button class='none' id='Ni2' onmouseover="showStuff('Nitobe')" 	onmouseout="hideStuff('Nitobe')">Nitobe Memorial Garden</button>
+		<button class='none' id='Pa2' onmouseover="showStuff('Pacific')" 	onmouseout="hideStuff('Pacific')">Pacific Museum of the Earth</button>
 	<p>*This project is not endorsed by the University of British Columbia. An intial prototype was developed for an assignment in LIBR 556 2016-2017. I have continued working on this project for fun. This map was last updated in August 2017.</p>
 </article>
 
