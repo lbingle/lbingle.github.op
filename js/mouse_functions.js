@@ -11,13 +11,21 @@
 
 //Functions when clicking on buttons
 		function borderRed(x, hide_thing){
+				removeRed();
 				x.className = 'red';
-				hideStuff(hide_thing);
 		}
 
 		function borderNone(x, hide_thing){
 				x.className ='none';
-				showStuff(hide_thing);
+		}
+
+		function removeRed(){
+			var other_buttons=document.querySelectorAll('button.red');
+			var i;
+			var other_length_of = other_buttons.length
+			for (i=0; i<other_length_of; i++) {
+				other_buttons[i].className = 'none'
+			}
 		}
 
 		function border(id){
