@@ -4,9 +4,14 @@ function showStuff(id) {
 			x.style.display = 'block';
 		}
 		
-function Going() {
+function Going(id) {
 	var x = document.getElementsByClassName("red");
-	var num_red = x.length
+	var y = document.getElementById(id);
+	var a = 'Logan'
+	var b = 'Bingle'
+	var path_name = a.concat('-', b);
+	//var num_red = x.length;
+	document.getElementById('demo').innerHTML = path_name;
 	if (num_red == 0) {
 		window.alert('Where are you? Select location from the list above.');
 	} else if (num_red == 1) {

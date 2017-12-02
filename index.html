@@ -18,6 +18,8 @@ Display route based on buttons with border
 	<h1>Welcome to the UBC Museum Guide*</h1>
 	<p>This website provides directions to UBC's many wonderful museums and attractions. To get started select your location from the list below. Then select your desired destination. The route will display on the map.<p>
 
+	<button onclick="Going('Be2')">Test</button>
+	<p id='demo'></p>
 	<h2>Where are you?</h2>
 		<button class='none' id="Be" onmouseover="showStuff('Beatty')" 		onmouseout="hideStuff('Beatty')" 	onclick="border('Be')">
 			Beatty Biodiversity Museum</button>
@@ -89,12 +91,6 @@ Display route based on buttons with border
 	</a>
 </div>
 
-<!--Path Images-->
-
-<div>
-	<img src="images/Test-Path.png" style="display: none;" id="Test-Path">
-</div>
-
 <!--Images to show on click-->
 
 <div class="MOA">
@@ -131,6 +127,12 @@ Display route based on buttons with border
 	<a href="#" class="showTip L6">
 	<img src="images/Bus.png" style="width: 11vw; height: 12vh; display: none;" id="Bu3">
 	</a>
+</div>
+
+<!--Path Images-->
+
+<div>
+	<img src="images/Test-Path.png" style="display: none;" id="Test-Path">
 </div>
 
 </body>
