@@ -27,8 +27,7 @@ function Going(id) {
 function path(id) {
 	var x = document.getElementsByClassName("red");
 	var value_x = x[0].value;
-	var str1 = 'images/';
-	var path = str1.concat(id,'-', value_x,'.png');
+	var path = id.concat('-', value_x);
 	showStuff(path)
-	alert(path)
+	//alert(path)
 }
