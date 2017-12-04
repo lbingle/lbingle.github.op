@@ -1,15 +1,10 @@
-<!--Next steps
-Need function to display routes
-Display route based on buttons with border
--->
 <!DOCTYPE html>
 <html>
 <head>
 	<title>UBC Map</title>
 	<link rel="stylesheet" href="css/ex.css" type="text/css">
 	<script src="js/mouse_functions.js" type="text/javascript"></script>
-	<script src="js/where-are-you-going.js" type="text/javascript"></script>
-	<script src="js/test.js" type="text/javascript"></script>
+	<!--<script src="js/where-are-you-going.js" type="text/javascript"></script>-->
 </head>
 
 <body>
@@ -18,7 +13,8 @@ Display route based on buttons with border
 	<h1>Welcome to the UBC Museum Guide*</h1>
 	<p>This website provides directions to UBC's many wonderful museums and attractions. To get started select your location from the list below. Then select your desired destination. The route will display on the map.<p>
 
-	<h2>Where are you?</h2>
+	<button onclick="test('Be2')">Test</button>	
+	<h2>Your Location?</h2>
 		<button class='none' id="Be" onmouseover="showStuff('Beatty')" 		onmouseout="hideStuff('Beatty')" 	onclick="border('Be')" value='Be4'>
 			Beatty Biodiversity Museum</button>
 		<Button class='none' id='Bu' onmouseover="showStuff('Bus')" 		onmouseout="hideStuff('Bus')" 		onclick="border('Bu')" value='Bu4'>
@@ -32,7 +28,7 @@ Display route based on buttons with border
 		<button class='none' id='Pa' onmouseover="showStuff('Pacific')" 	onmouseout="hideStuff('Pacific')" 	onclick="border('Pa')" value="Pa4">
 			Pacific Museum of the Earth</button>
 
-	<h2>Where do you want to go?</h2>
+	<h2>Your destination?</h2>
 		<Button class='none' id='Be2' onmouseover="showStuff('Beatty')" 	onmouseout="hideStuff('Beatty')" 	onclick="Going('Be2')">
 		Beatty Biodiversity Museum</BUTTON>
 		<Button class='none' id='Bu2' onmouseover="showStuff('Bus')" 		onmouseout="hideStuff('Bus')"		onclick="Going('Bu2')">
@@ -129,12 +125,12 @@ Display route based on buttons with border
 
 <!--Path Images-->
 
-<div>
-	<img src="images/MO-Bu.png" style="display: none;" id="MO2-Bu4">
+<div class="MO-Bu">
+	<img src="images/Bu-MO.png" style="width: 48vw; height: 33vh; display: none;" id="MO2-Bu4">
 </div>
 
-<div>
-	<img src="images/MO-Bu.png" style="display: none;" id="Bu2-MO4">
+<div class="MO-Bu">
+	<img src="images/Bu-MO.png" style="width: 48vw; height: 33vh; display: none;" id="Bu2-MO4">
 </div>
 
 </body>
