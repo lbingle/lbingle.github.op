@@ -49,8 +49,43 @@ article{
 		position: fixed;
 		left: 72.5vw;
 		top: 75vh; 
-		border: 0;
+		border: 0px;
 		opacity: .7;
+	}
+
+	div.Be-Bu {
+		position: fixed;
+		left: 70vw;
+		top: 40vh;
+		border: 0px;
+	}
+
+	div.Be-MO{
+		position: fixed;
+		left: 45vw;
+		top: 11vh;
+		border: 0px;
+		}
+
+	div.Be-Ne{
+		position: fixed;
+		left: 69.5vw;
+		top: 51.5vh;
+		border: 0px;
+	}
+
+	div.Be-Ni{
+		position: fixed;
+		left: 45.5vw;
+		top: 49vh;
+		border: 0px;
+	}
+
+	div.Be-Pa {
+		position: fixed;
+		left: 75.5vw;
+		top: 85vh;
+		border: 0px;
 	}
 
 	div.Nest{
