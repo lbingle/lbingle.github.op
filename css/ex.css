@@ -109,6 +109,27 @@ article{
 		border: 0;
 	}
 
+	div.MO-Ne {
+		position: fixed;
+		left: 44.5vw;
+		top: 12vh;
+		border: 0px;
+	}
+
+	div.MO-Ni {
+		position: fixed;
+		left: 45vw;
+		top: 19vh;
+		border: 0px;
+	}
+
+	div.MO-Pa {
+		position: fixed;
+		left: 45vw;
+		top: 17vh;
+		border: 0px;
+	}
+
 	div.Nitobe{
 		position: fixed;
 		left: 39vw;
