@@ -22,29 +22,6 @@ article{
 	}	
 
 /*Positioning of Elements on Map*/
-	div.MOA{
-		position: fixed;
-		left: 40.2vw;
-		top: 7.8vh; 
-		border: 0;
-		opacity: .7;
-		}
-
-	div.MO-Bu{
-		position: fixed;
-		left: 45vw;
-		top: 10.8vh;
-		border: 0;
-	}
-
-	div.Nitobe{
-		position: fixed;
-		left: 39vw;
-		top: 40.8vh; 
-		border: 0;
-		opacity: .7;
-	}
-
 	div.Beatty{
 		position: fixed;
 		left: 72.5vw;
@@ -88,6 +65,58 @@ article{
 		border: 0px;
 	}
 
+	div.Bus{
+		position: fixed;
+		left: 85.7vw;
+		top: 37vh; 
+		border: 0;
+		opacity: .7;
+	}
+
+	div.Bu-Ne {
+		position: fixed;
+		left: 83vw;
+		top: 34vh;
+		border: 0px;
+	}
+
+	div.Bu-Ni {
+		position: fixed;
+		left: 45vw;
+		top: 27vh;
+		border: 0px;
+	}
+
+	div.Bu-Pa{
+		position: fixed;
+		left: 70vw;
+		top: 35vh;
+		border: 0px;
+	}
+
+	div.MOA{
+		position: fixed;
+		left: 40.2vw;
+		top: 7.8vh; 
+		border: 0;
+		opacity: .7;
+		}
+
+	div.MO-Bu{
+		position: fixed;
+		left: 45vw;
+		top: 10.8vh;
+		border: 0;
+	}
+
+	div.Nitobe{
+		position: fixed;
+		left: 39vw;
+		top: 40.8vh; 
+		border: 0;
+		opacity: .7;
+	}
+
 	div.Nest{
 		position: fixed;
 		left: 76vw;
@@ -100,14 +129,6 @@ article{
 		position: fixed;
 		left: 72vw;
 		top: 84vh; 
-		border: 0;
-		opacity: .7;
-	}
-
-	div.Bus{
-		position: fixed;
-		left: 85.7vw;
-		top: 37vh; 
 		border: 0;
 		opacity: .7;
 	}
