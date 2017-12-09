@@ -10,9 +10,9 @@ ul li { margin-bottom:.5em; }
 p { max-width: 60em; }
 span.news { font-weight:bold; font-style:italic; }
 /*Classes used to indicate button selected*/
-button.none {font: 14px/1.4 verdana, arial, helvetica, sans-serif; border-color: none}
-button.red{font: 14px/1.4 verdana, arial, helvetica, sans-serif; border-color: red}
-button.green{font: 14px/1.4 verdana, arial, helvetica, sans-serif; border-color: green}
+button.none {font: 14px/1.4 verdana, arial, helvetica, sans-serif; border-color: none; width: 14vw; height: 8vh}
+button.red{font: 14px/1.4 verdana, arial, helvetica, sans-serif; border-color: red; width: 14vw}
+button.green{font: 14px/1.4 verdana, arial, helvetica, sans-serif; border-color: green; width: 14vw}
 
 /*Positioning for text on the page*/
 article{
@@ -130,18 +130,32 @@ article{
 		border: 0px;
 	}
 
-	div.Nitobe{
-		position: fixed;
-		left: 39vw;
-		top: 40.8vh; 
-		border: 0;
-		opacity: .7;
-	}
-
 	div.Nest{
 		position: fixed;
 		left: 76vw;
 		top: 39vh; 
+		border: 0;
+		opacity: .7;
+	}
+
+	div.Ne-Ni {
+		position: fixed;
+		left: 46vw;
+		top: 36.5vh;
+		border: 0px;
+	}
+
+	div.Ne-Pa {
+		position: fixed;
+		left: 69.5vw;
+		top: 51vh;
+		border: 0px;
+	}
+
+	div.Nitobe{
+		position: fixed;
+		left: 39vw;
+		top: 40.8vh; 
 		border: 0;
 		opacity: .7;
 	}

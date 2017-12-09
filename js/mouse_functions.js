@@ -1,4 +1,3 @@
-//Branch test text
 //functions to show and hide location highlighting
 		function showStuff(id) {
 			var x = document.getElementById(id);
@@ -13,25 +12,50 @@
 //Functions to show and hide button highlighting
 		function borderRed(x, hide_thing){
 				x.className = 'red';
-				hideStuff(hide_thing);
 		}
 
 		function borderNone(x, hide_thing){
 				x.className ='none';
-				showStuff(hide_thing);
 		}
 
 //Function to decide to turn highlighting on or off
 
-		function borderOnOff(x, hide_thing, show_thing){
+		function RedBorderOnOff(x, hide_thing, show_thing, id){
 			if(x.classList.contains('none')){
 				borderRed(x, hide_thing);
 				showStuff(show_thing);
+				hideStuff(hide_thing);
+				HideLocations(id)
 			} else {
 				borderNone(x, hide_thing);
 				hideStuff(show_thing);
+				showStuff(hide_thing);
+				ShowLocations();
 			}
 		}
+
+//Function to hide Location buttons that are not selected
+		function HideLocations(id) {
+			loc = ['Be','Bu','MO','Ne','Ni','Pa'];
+			var loc_length = loc.length;
+			var i;
+			for (i=0; i < loc_length; i++){
+					var array_id = loc[i];
+					if(id != array_id) {
+						hideStuff(array_id);
+					}
+				}
+		}
+
+		function ShowLocations() {
+			loc = ['Be','Bu','MO','Ne','Ni','Pa'];
+			var loc_length = loc.length;
+			var i;
+			for (i=0; i < loc_length; i++){
+					var array_id = loc[i];
+					showStuff(array_id);
+				}
+		}		
 
 //Function to use with Where are you? buttons
 		function border(id){
@@ -41,53 +65,74 @@
 			var number_add2= '3';
 			var hide_thing = id.concat('', number_add);
 			var show_thing = id.concat('', number_add2);
-			borderOnOff(x, hide_thing, show_thing);
+			RedBorderOnOff(x, hide_thing, show_thing, id);
 		}
 
 //Functions to use with Where are you going? buttons
 //using value property to return option value assigned to element
-function path(id) {
-	var x = document.getElementsByClassName("red");
-	var value_x = x[0].value;
-	var path = id.concat('-', value_x);
-	showStuff(path)
-	//alert(path)
-}
 
-function message(num_red, id) {
-	if (num_red == 0) {
-		window.alert('Where are you? Select location from the list above.');
-	} else if (num_red == 1) {
-		path(id);
-	} else if (num_red > 1) {
-		alert('Wow, you are in two places at once! Unless you are superhuman, I would suggest selecting one location.');
+//Function to hide and show Destination buttons that are not selected
+function HideDestination(id) {
+	loc = ['Be2','Bu2','MO2','Ne2','Ni2','Pa2'];
+	var loc_length = loc.length;
+	var i;
+	for (i=0; i < loc_length; i++){
+		var array_id = loc[i];
+		if(id != array_id) {
+		hideStuff(array_id);
+		}
 	}
 }
 
-function goingHighlight(y, show_thing) {
+function ShowDestination() {
+	loc = ['Be2','Bu2','MO2','Ne2','Ni2','Pa2'];
+	var loc_length = loc.length;
+	var i;
+	for (i=0; i < loc_length; i++){
+		var array_id = loc[i];
+		showStuff(array_id);
+	}
+}
+
+function path(id, x) {
+	var value_x = x[0].value;
+	var path = id.concat('-', value_x);
+	showStuff(path);
+}
+
+function pathHide(id, x) {
+	var value_x = x[0].value;
+	var path = id.concat('-', value_x);
+	hideStuff(path);
+}
+
+function borderGreen(y) {
+	y.className = 'green';
+}
+
+function borderNoneG(y) {
+	y.className ='none';
+}
+
+
+function GreenBorderOnOff(x, y, show_thing, id) {
 	if(y.classList.contains('none')){
+		borderGreen(y);
 		showStuff(show_thing);
-		y.className = 'green'
+		HideDestination(id);
+		path(id, x);
 	} else {
+		borderNoneG(y);
 		hideStuff(show_thing);
-		y.className ='none';
+		ShowDestination();
+		pathHide(id, x);
 	}
 }
 
 function Going(id) {
 	var x = document.getElementsByClassName("red");
 	var y = document.getElementById(id)
-	var z = document.getElementsByClassName('green')
 	var id_base = id.substring(0, 2);
 	var show_thing = id_base.concat('3')
-	var num_red = x.length;
-	var num_green = z.length;
-	goingHighlight(y, show_thing);
-	message(num_red, id);
+	GreenBorderOnOff(x, y, show_thing, id);
 	}
-
-function test(id) {
-	x = id.substring(0, 2);
-	y = x.concat('3')
-	alert(y);
-}
