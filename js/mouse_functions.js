@@ -1,3 +1,5 @@
+//Need a function to combine border(id) and Going(id) that will allow for cross operability
+//Should have one list, select locations and they light up with a path between them
 //functions to show and hide elements
 		function showStuff(id) {
 			var x = document.getElementById(id);
