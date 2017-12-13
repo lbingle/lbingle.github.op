@@ -1,8 +1,11 @@
-<!--Next steps
-Need function to display routes 
-Display route based on buttons with border
--->
 <!DOCTYPE html>
+<!--Abbreviations: Beatty (Be), Bus Loop (Bu), MOA (MO), The Nest (Ne), Nitobe (Ni), Pacific (Pa)-->
+<!--Index-->
+<!--Line 49: Map-->
+<!--Line 58: Images to show on mouse over and mouse out, id is location's full name (ex. Beatty)-->
+<!--Line 87: Images to show on click, id is first two letters in location name plus 2 (ex. Be2)-->
+<!--Line 116: Path Images, ordered alphabetically-->
+
 <html>
 <head>
 	<title>UBC Map</title>
@@ -16,108 +19,219 @@ Display route based on buttons with border
 	<h1>Welcome to the UBC Museum Guide*</h1>
 	<p>This website provides directions to UBC's many wonderful museums and attractions. To get started select your location from the list below. Then select your desired destination. The route will display on the map.<p>
 
-	<h2>Where are you?</h2>
-		<button class='none' id="Be" onmouseover="showStuff('Beatty')" 		onmouseout="hideStuff('Beatty')" 	onclick="border('Be')">
+	<button onclick="test()">Test</button>
+	
+	<h2>Your Location?</h2>
+		<button class='none' id="Be" onmouseover="showStuff('Beatty')" 		onmouseout="hideStuff('Beatty')" 	onclick="border('Be')" value='Be4'>
 			Beatty Biodiversity Museum</button>
-		<Button class='none' id='Bu' onmouseover="showStuff('Bus')" 		onmouseout="hideStuff('Bus')" 		onclick="border('Bu')">
+		<Button class='none' id='Bu' onmouseover="showStuff('Bus')" 		onmouseout="hideStuff('Bus')" 		onclick="border('Bu')" value='Bu4'>
 			Bus Loop at UBC</button>
-		<button class='none' id='MO' onmouseover="showStuff('MOA')" 		onmouseout="hideStuff('MOA')" 		onclick="border('MO')">
+		<button class='none' id='MO' onmouseover="showStuff('MOA')" 		onmouseout="hideStuff('MOA')" 		onclick="border('MO')" value="MO4">
 			Museum of Anthropology (MOA)</button>
-		<button class='none' id='Ne' onmouseover="showStuff('Nest')" 		onmouseout="hideStuff('Nest')" 		onclick="border('Ne')">
+		<button class='none' id='Ne' onmouseover="showStuff('Nest')" 		onmouseout="hideStuff('Nest')" 		onclick="border('Ne')" value="Ne4">
 			The Nest</button>
-		<button class='none' id='Ni' onmouseover="showStuff('Nitobe')" 		onmouseout="hideStuff('Nitobe')" 	onclick="border('Ni')">
+		<button class='none' id='Ni' onmouseover="showStuff('Nitobe')" 		onmouseout="hideStuff('Nitobe')" 	onclick="border('Ni')" value="Ni4">
 			Nitobe Memorial Garden</button>
-		<button class='none' id='Pa' onmouseover="showStuff('Pacific')" 	onmouseout="hideStuff('Pacific')" 	onclick="border('Pa')">
+		<button class='none' id='Pa' onmouseover="showStuff('Pacific')" 	onmouseout="hideStuff('Pacific')" 	onclick="border('Pa')" value="Pa4">
 			Pacific Museum of the Earth</button>
 
-	<h2>Where do you want to go?</h2>
-		<Button class='none' id='Be2' style='display: block;' onmouseover="showStuff('Beatty')" 		onmouseout="hideStuff('Beatty')">Beatty Biodiversity Museum</BUTTON>
-		<Button class='none' id='Bu2' onmouseover="showStuff('Bus')" 		onmouseout="hideStuff('Bus')">Bus Loop at UBC</button>
-		<button class='none' id='MO2' onmouseover="showStuff('MOA')" 		onmouseout="hideStuff('MOA')">Museum of Anthropology (MOA)</button>
-		<button class='none' id='Ne2' onmouseover="showStuff('Nest')" 		onmouseout="hideStuff('Nest')">The Nest</button>
-		<button class='none' id='Ni2' onmouseover="showStuff('Nitobe')" 	onmouseout="hideStuff('Nitobe')">Nitobe Memorial Garden</button>
-		<button class='none' id='Pa2' onmouseover="showStuff('Pacific')" 	onmouseout="hideStuff('Pacific')">Pacific Museum of the Earth</button>
+	<h2>Your destination?</h2>
+		<Button class='none' id='Be2' onmouseover="showStuff('Beatty')" 	onmouseout="hideStuff('Beatty')" 	onclick="Going('Be2')">
+		Beatty Biodiversity Museum</BUTTON>
+		<Button class='none' id='Bu2' onmouseover="showStuff('Bus')" 		onmouseout="hideStuff('Bus')"		onclick="Going('Bu2')">
+		Bus Loop at UBC</button>
+		<button class='none' id='MO2' onmouseover="showStuff('MOA')" 		onmouseout="hideStuff('MOA')" 		onclick="Going('MO2')">
+		Museum of Anthropology (MOA)</button>
+		<button class='none' id='Ne2' onmouseover="showStuff('Nest')" 		onmouseout="hideStuff('Nest')" 		onclick="Going('Ne2')">
+		The Nest</button>
+		<button class='none' id='Ni2' onmouseover="showStuff('Nitobe')" 	onmouseout="hideStuff('Nitobe')" 	onclick="Going('Ni2')">
+		Nitobe Memorial Garden</button>
+		<button class='none' id='Pa2' onmouseover="showStuff('Pacific')" 	onmouseout="hideStuff('Pacific')" 	onclick="Going('Pa2')">
+		Pacific Museum of the Earth</button>
 	<p>*This project is not endorsed by the University of British Columbia. An intial prototype was developed for an assignment in LIBR 556 2016-2017. I have continued working on this project for fun. This map was last updated in August 2017.</p>
 </article>
 
 
-<!--Map Section-->
+<!--Map-->
 <img src="images/Route.jpg" style="width: 80vw; height: 90vh; position: fixed; top: 1.5vh; left: 19vw">
 
+
+
+
+
+
+<!--Images to show on mouse over and mouse out-->
 <div class="MOA">
-		<a href="#" class="showTip L1">
-			<img src="images/MOA.png" style="width: 8vw; height: 15vh; display: none;" id="MOA">
-		</a>
+	<img src="images/MOA.png" style="width: 8vw; height: 15vh; display: none;" id="MOA">
 </div>
 
 <div class="Nitobe">
-		<a href="#" class="showTip L2">
-			<img src="images/Nitobe.png" style="width: 11vw; height: 20.5vh; display: none;" id="Nitobe">
-		</a>
+	<img src="images/Nitobe.png" style="width: 11vw; height: 20.5vh; display: none;" id="Nitobe">
 </div>
 
 <div class="Beatty">
-	<a href="#" class="showTip L3">
-		<img src="images/Beatty.png" style="width: 10vw; height: 20.5vh; display: none;" id="Beatty">
-	</a>
+	<img src="images/Beatty.png" style="width: 10vw; height: 20.5vh; display: none;" id="Beatty">
 </div>
 
 <div class="Nest">
-	<a href="#" class="showTip L4">
-		<img src="images/Nest.png" style="width: 8.4vw; height: 16vh; display: none;" id="Nest">
-	</a>
+	<img src="images/Nest.png" style="width: 8.4vw; height: 16vh; display: none;" id="Nest">
 </div>
 
 <div class="Pacific">
-	<a href="#" class="showTip L5">
-		<img src="images/Pacific.png" style="width: 6vw; height: 11vh; display: none;" id="Pacific">
-	</a>	
+	<img src="images/Pacific.png" style="width: 6vw; height: 11vh; display: none;" id="Pacific">	
 </div>
 
 <div class="Bus">
-	<a href="#" class="showTip L6">
 	<img src="images/Bus.png" style="width: 11vw; height: 12vh; display: none;" id="Bus">
-	</a>
 </div>
+
+
+
 
 <!--Images to show on click-->
 
 <div class="MOA">
-		<a href="#" class="showTip L1">
-			<img src="images/MOA.png" style="width: 8vw; height: 15vh; display: none;" id="MO3">
-		</a>
+	<img src="images/MOA.png" style="width: 8vw; height: 15vh; display: none;" id="MO3">
 </div>
 
 <div class="Nitobe">
-		<a href="#" class="showTip L2">
-			<img src="images/Nitobe.png" style="width: 11vw; height: 20.5vh; display: none;" id="Ni3">
-		</a>
+	<img src="images/Nitobe.png" style="width: 11vw; height: 20.5vh; display: none;" id="Ni3">
 </div>
 
 <div class="Beatty">
-	<a href="#" class="showTip L3">
-		<img src="images/Beatty.png" style="width: 10vw; height: 20.5vh; display: none;" id="Be3">
-	</a>
+	<img src="images/Beatty.png" style="width: 10vw; height: 20.5vh; display: none;" id="Be3">
 </div>
 
 <div class="Nest">
-	<a href="#" class="showTip L4">
-		<img src="images/Nest.png" style="width: 8.4vw; height: 16vh; display: none;" id="Ne3">
-	</a>
+	<img src="images/Nest.png" style="width: 8.4vw; height: 16vh; display: none;" id="Ne3">
 </div>
 
 <div class="Pacific">
-	<a href="#" class="showTip L5">
-		<img src="images/Pacific.png" style="width: 6vw; height: 11vh; display: none;" id="Pa3">
-	</a>	
+	<img src="images/Pacific.png" style="width: 6vw; height: 11vh; display: none;" id="Pa3">
 </div>
 
 <div class="Bus">
-	<a href="#" class="showTip L6">
 	<img src="images/Bus.png" style="width: 11vw; height: 12vh; display: none;" id="Bu3">
-	</a>
 </div>
 
+
+
+<!--Path Images-->
+<!--Be routes-->
+<div class="Be-Bu">
+	<img src="images/Be-Bu.png" style="width: 26.5vw; height: 41vh; display: none;" id="Be2-Bu4">
+</div>
+
+<div class="Be-Bu">
+	<img src="images/Be-Bu.png" style="width: 26.5vw; height: 41vh; display: none;" id="Bu2-Be4">
+</div>
+
+<div class="Be-MO">
+	<img src="images/Be-MO.png" style="width: 30vw; height: 73vh; display: none;" id="Be2-MO4">
+</div>
+
+<div class="Be-MO">
+	<img src="images/Be-MO.png" style="width: 30vw; height: 73vh; display: none;" id="MO2-Be4">
+</div>
+
+<div class="Be-Ne">
+	<img src="images/Be-Ne.png" style="width: 10vw; height: 33vh; display: none;" id="Be2-Ne4">
+</div>
+
+<div class="Be-Ne">
+	<img src="images/Be-Ne.png" style="width: 10vw; height: 33vh; display: none;" id="Ne2-Be4">
+</div>
+
+<div class="Be-Ni">
+	<img src="images/Be-Ni.png" style="width: 30vw; height: 34.5vh; display: none;" id="Be2-Ni4">
+</div>
+
+<div class="Be-Ni">
+	<img src="images/Be-Ni.png" style="width: 30vw; height: 34.5vh; display: none;" id="Ni2-Be4">
+</div>
+
+<div class="Be-Pa">
+	<img src="images/Be-Pa.png" style="width: 2vw; height: 5vh; display: none;" id="Be2-Pa4">
+</div>
+
+<div class="Be-Pa">
+	<img src="images/Be-Pa.png" style="width: 2vw; height: 5vh; display: none;" id="Pa2-Be4">
+</div>
+
+<!--Bu routes-->
+<div class="Bu-Ne">
+	<img src="images/Bu-Ne.png" style="width: 10vw; height: 20vh; display: none;" id="Bu2-Ne4">
+</div>
+
+<div class="Bu-Ne">
+	<img src="images/Bu-Ne.png" style="width: 10vw; height: 20vh; display: none;" id="Ne2-Bu4">
+</div>
+
+<div class="Bu-Ni">
+	<img src="images/Bu-Ni.png" style="width: 48.5vw; height: 25vh; display: none;" id="Bu2-Ni4">
+</div>
+
+<div class="Bu-Ni">
+	<img src="images/Bu-Ni.png" style="width: 48.5vw; height: 25vh; display: none;" id="Ni2-Bu4">
+</div>
+
+<div class="Bu-Pa">
+	<img src="images/Bu-Pa.png" style="width: 23vw; height: 53vh; display: none;" id="Bu2-Pa4">
+</div>
+
+<div class="Bu-Pa">
+	<img src="images/Bu-Pa.png" style="width: 23vw; height: 53vh; display: none;" id="Pa2-Bu4">
+</div>
+
+<!--MO routes-->
+<div class="MO-Bu">
+	<img src="images/Bu-MO.png" style="width: 48vw; height: 33vh; display: none;" id="MO2-Bu4">
+</div>
+
+<div class="MO-Bu">
+	<img src="images/Bu-MO.png" style="width: 48vw; height: 33vh; display: none;" id="Bu2-MO4">
+</div>
+
+<div class="MO-Ne">
+	<img src="images/MO-Ne.png" style="width: 33vw; height: 35vh; display: none;" id="MO2-Ne4">
+</div>
+
+<div class="MO-Ne">
+	<img src="images/MO-Ne.png" style="width: 33vw; height: 35vh; display: none;" id="Ne2-MO4">
+</div>
+
+<div class="MO-Ni">
+	<img src="images/MO-Ni.png" style="width: 3vw; height: 30vh; display: none;" id="Ni2-MO4">
+</div>
+
+<div class="MO-Ni">
+	<img src="images/MO-Ni.png" style="width: 3vw; height: 30vh; display: none;" id="MO2-Ni4">
+</div>
+
+<div class="MO-Pa">
+	<img src="images/MO-Pa.png" style="width: 31vw; height: 75vh; display: none;" id="MO2-Pa4">
+</div>
+
+<div class="MO-Pa">
+	<img src="images/MO-Pa.png" style="width: 31vw; height: 75vh; display: none;" id="Pa2-MO4">
+</div>
+
+<!--Ne Routes-->
+<div class="Ne-Ni">
+	<img src="images/Ne-Ni.png" style="width: 32vw; height: 14.5vh; display: none;" id="Ne2-Ni4">
+</div>
+
+<div class="Ne-Ni">
+	<img src="images/Ne-Ni.png" style="width: 32vw; height: 14.5vh; display: none;" id="Ni2-Ne4">
+</div>
+
+<div class="Ne-Pa">
+	<img src="images/Ne-Pa.png" style="width: 9.5vw; height: 40vh; display: none;" id="Ne2-Pa4">
+</div>
+
+<div class="Ne-Pa">
+	<img src="images/Ne-Pa.png" style="width: 9.5vw; height: 40vh; display: none;" id="Pa2-Ne4">
+</div>
 
 </body>
 </html>
